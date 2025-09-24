@@ -4,13 +4,17 @@
     <div class="hero-container">
       <!-- Background Video (desktop/tablet) -->
       <video autoplay loop muted playsinline class="video-bg">
-        <source src="/bg3.mp4" type="video/mp4" />
+        <source src="https://storage.googleapis.com/bgsparta/bg3.mp4" />
         Your browser does not support the video tag.
       </video>
 
       <!-- Fallback image if JS is disabled -->
       <noscript>
-        <img src="/images/back-up.png" alt="Sparta Trucking background" class="noscript-bg" />
+        <img
+          src="/images/back-up.png"
+          alt="Sparta Trucking background"
+          class="noscript-bg"
+        />
       </noscript>
 
       <!-- Top Branding Section -->
@@ -36,64 +40,66 @@
 </template>
 
 <script setup>
-import { useRouter } from 'vue-router'
-import About from '@/components/About.vue'
-import { useHead } from '#imports'
+import { useRouter } from "vue-router";
+import About from "@/components/About.vue";
+import { useHead } from "#imports";
 
-const router = useRouter()
+const router = useRouter();
 const navigateToQuote = () => {
-  router.push('/contact-us')
-}
+  router.push("/contact-us");
+};
 
 useHead({
   script: [
     {
-      type: 'application/ld+json',
+      type: "application/ld+json",
       children: JSON.stringify({
         "@context": "https://schema.org",
         "@type": "WebSite",
-        "url": "https://www.spartatrucking.com/",
-        "name": "Sparta Trucking",
-        "alternateName": "Sparta Freight & Logistics",
-        "description": "MBE/DBE certified trucking and freight brokering company. Specializing in Reefer, Flatbed, Tankers, Oversize, and Waste Water Removal.",
-        "potentialAction": {
+        url: "https://www.spartatrucking.com/",
+        name: "Sparta Trucking",
+        alternateName: "Sparta Freight & Logistics",
+        description:
+          "MBE/DBE certified trucking and freight brokering company. Specializing in Reefer, Flatbed, Tankers, Oversize, and Waste Water Removal.",
+        potentialAction: {
           "@type": "SearchAction",
-          "target": "https://www.spartatrucking.com/search?q={query}",
-          "query-input": "required name=query"
-        }
-      })
+          target: "https://www.spartatrucking.com/search?q={query}",
+          "query-input": "required name=query",
+        },
+      }),
     },
     {
-      type: 'application/ld+json',
+      type: "application/ld+json",
       children: JSON.stringify({
         "@context": "https://schema.org",
         "@type": "LocalBusiness",
-        "name": "Sparta Trucking",
-        "url": "https://www.spartatrucking.com/",
-        "logo": "https://www.spartatrucking.com/images/s2logo.png",
-        "image": "https://www.spartatrucking.com/og-cover.jpg",
-        "description": "Sparta Trucking is MBE/DBE certified, offering freight brokering and trucking services including Reefer, Flatbed, Tankers, Oversize hauling, and Waste Water Removal.",
-        "telephone": "+1-XXX-XXX-XXXX",
-        "address": {
+        name: "Sparta Trucking",
+        url: "https://www.spartatrucking.com/",
+        logo: "https://www.spartatrucking.com/images/s2logo.png",
+        image: "https://www.spartatrucking.com/og-cover.jpg",
+        description:
+          "Sparta Trucking is MBE/DBE certified, offering freight brokering and trucking services including Reefer, Flatbed, Tankers, Oversize hauling, and Waste Water Removal.",
+        telephone: "+1-XXX-XXX-XXXX",
+        address: {
           "@type": "PostalAddress",
-          "addressLocality": "Your City",
-          "addressRegion": "NC",
-          "postalCode": "XXXXX",
-          "addressCountry": "US"
+          addressLocality: "Your City",
+          addressRegion: "NC",
+          postalCode: "XXXXX",
+          addressCountry: "US",
         },
-        "areaServed": "United States",
-        "makesOffer": [
-          { "@type": "Service", "name": "Reefer Hauling" },
-          { "@type": "Service", "name": "Flatbed Hauling" },
-          { "@type": "Service", "name": "Tanker Transport" },
-          { "@type": "Service", "name": "Oversize / Heavy Haul" },
-          { "@type": "Service", "name": "Waste Water Removal" },
-          { "@type": "Service", "name": "Freight Brokering" }
-        ]
-      })
-    }
-  ]
-})
+        areaServed: "United States",
+        makesOffer: [
+          { "@type": "Service", name: "Reefer Hauling" },
+          { "@type": "Service", name: "Flatbed Hauling" },
+          { "@type": "Service", name: "Tanker Transport" },
+          { "@type": "Service", name: "Oversize / Heavy Haul" },
+          { "@type": "Service", name: "Waste Water Removal" },
+          { "@type": "Service", name: "Freight Brokering" },
+        ],
+      }),
+    },
+  ],
+});
 </script>
 
 <style>
@@ -101,7 +107,7 @@ useHead({
   position: relative;
   height: 100vh;
   overflow: hidden;
-  font-family: 'Arial', sans-serif;
+  font-family: "Arial", sans-serif;
 
   /* Desktop default: no background image (video shows).
      We'll enable the backup image on mobile in the media query below. */
@@ -157,7 +163,7 @@ useHead({
 .logo-text {
   font-weight: bold;
   color: #fafaf9;
-  font-family: 'Arial Black', sans-serif;
+  font-family: "Arial Black", sans-serif;
   font-size: 1.1em;
   margin: 0;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
@@ -206,7 +212,7 @@ useHead({
   }
   /* Show backup image as hero background */
   .hero-container {
-    background: url('/images/back-up.png') center center / cover no-repeat;
+    background: url("/images/back-up.png") center center / cover no-repeat;
   }
   /* Tweak layout a bit for small screens */
   .branding-bar {
