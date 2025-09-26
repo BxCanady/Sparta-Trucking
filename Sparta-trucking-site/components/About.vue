@@ -1,19 +1,23 @@
 <template>
   <section class="about-section" aria-label="About Sparta Trucking">
     <div class="about-wrap">
-      <div class="about-badge" role="status" aria-live="polite">
-        MBE / DBE Certified
+      <!-- Company Logo with absolute badge -->
+      <div class="logo-wrapper">
+        <img
+          src="/images/s2logo.png"
+          alt="Sparta Trucking Logo"
+          class="about-logo"
+          loading="lazy"
+          width="auto"
+          height="120"
+        />
+        <img
+          src="/images/dbe.png"
+          alt="MBE / DBE Certified"
+          class="badge-img"
+          loading="lazy"
+        />
       </div>
-
-      <!-- Company Logo -->
-      <img
-        src="/images/s2logo.png"
-        alt="Sparta Trucking Logo"
-        class="about-logo"
-        loading="lazy"
-        width="auto"
-        height="120"
-      />
 
       <h2 class="about-title">About Sparta Trucking</h2>
 
@@ -48,6 +52,7 @@
         <div class="pill">Oversize</div>
         <div class="pill">Waste Water Removal</div>
         <div class="pill">Freight Brokering</div>
+        <div class="pill">Land Clearing</div>
       </div>
 
       <div class="about-cta">
@@ -125,7 +130,7 @@
 </template>
 
 <script setup>
-import { useHead } from "#imports"; // Nuxt 4 auto-imports composables
+import { useHead } from "#imports";
 
 useHead({
   title: "About Sparta Trucking | Reliable Freight Solutions",
@@ -166,10 +171,6 @@ useHead({
 </script>
 
 <style scoped>
-/* keep your existing styles unchanged */
-
-/* ...existing style code from your example... */
-
 .about-section {
   position: relative;
   background: #0f172a;
@@ -190,20 +191,14 @@ useHead({
   text-align: center;
 }
 
-.about-badge {
+/* Logo wrapper with badge overlay */
+.logo-wrapper {
+  position: relative;
   display: inline-block;
-  font-weight: 800;
-  letter-spacing: 0.5px;
-  background: linear-gradient(90deg, #ff9307, #1e40af);
-  color: #0f172a;
-  padding: 8px 14px;
-  border-radius: 999px;
-  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.25);
-  margin-bottom: 16px;
 }
 
 .about-logo {
-  height: 120px;
+  height: 150px;
   width: auto;
   margin: 0 auto 20px auto;
   display: block;
@@ -211,6 +206,17 @@ useHead({
   border-radius: 12px;
   background: #fff;
   padding: 8px;
+}
+
+.badge-img {
+  position: absolute;
+  top: -94px;
+  right: 23px;
+  width: 120px; /* adjust to your badge */
+  height: auto;
+  border-radius: 50%;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  background: #fff;
 }
 
 .about-title {
