@@ -4,18 +4,12 @@
       <!-- Company Logo with absolute badge -->
       <div class="logo-wrapper">
         <img
-          src="/images/s2logo.png"
+          src="/images/dbe.png"
           alt="Sparta Trucking Logo"
           class="about-logo"
           loading="lazy"
           width="auto"
           height="120"
-        />
-        <img
-          src="/images/dbe.png"
-          alt="MBE / DBE Certified"
-          class="badge-img"
-          loading="lazy"
         />
       </div>
 
@@ -50,7 +44,6 @@
         <div class="pill">Flatbed</div>
         <div class="pill">Tankers</div>
         <div class="pill">Oversize</div>
-        <div class="pill">Waste Water Removal</div>
         <div class="pill">Freight Brokering</div>
         <div class="pill">Land Clearing</div>
       </div>

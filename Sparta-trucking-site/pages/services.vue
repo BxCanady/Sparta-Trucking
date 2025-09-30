@@ -8,7 +8,7 @@
           <a href="#flatbed">Flatbed</a>
           <a href="#tankers">Tankers</a>
           <a href="#oversize">Oversize</a>
-          <a href="#waste-water-removal">Waste Water Removal</a>
+          <a href="#land-clearing">Land Clearing</a>
           <a href="#freight-brokering">Freight Brokering</a>
         </nav>
       </div>
@@ -58,12 +58,13 @@
       </div>
     </section>
 
-    <section id="waste-water-removal" class="svc">
+    <section id="land-clearing" class="svc">
       <div class="svc-wrap">
-        <h2 class="svc-title">Waste Water Removal</h2>
+        <h2 class="svc-title">Land Clearing</h2>
         <p class="svc-text">
-          Reliable collection and hauling services with compliant disposal and
-          documented chain of custody.
+          Professional land clearing services to prepare your site for
+          construction, development, or agricultural use with efficiency and
+          environmental responsibility.
         </p>
         <NuxtLink to="/quote" class="svc-btn">Request Service</NuxtLink>
       </div>
@@ -76,38 +77,38 @@
           Licensed brokerage connecting shippers with vetted carriers for
           flexible capacity and end-to-end coordination.
         </p>
-        <NuxtLink to="/quote" class="svc-btn">Start a Brokerage Request</NuxtLink>
+        <NuxtLink to="/quote" class="svc-btn"
+          >Start a Brokerage Request</NuxtLink
+        >
       </div>
     </section>
   </main>
 </template>
 
 <script setup>
-import { useHead } from '#imports'
+import { useHead } from "#imports";
 
 useHead({
-  title: 'Services | Sparta Trucking',
+  title: "Services | Sparta Trucking",
   meta: [
     {
-      name: 'description',
+      name: "description",
       content:
-        'MBE/DBE certified trucking and freight brokering: Reefer, Flatbed, Tankers, Oversize, Waste Water Removal.'
+        "MBE/DBE certified trucking and freight brokering: Reefer, Flatbed, Tankers, Oversize, Waste Water Removal.",
     },
     {
-      property: 'og:title',
-      content: 'Trucking & Freight Services — Sparta Trucking'
+      property: "og:title",
+      content: "Trucking & Freight Services — Sparta Trucking",
     },
     {
-      property: 'og:description',
+      property: "og:description",
       content:
-        'Reefer, Flatbed, Tankers, Oversize, Waste Water Removal, and Freight Brokering.'
+        "Reefer, Flatbed, Tankers, Oversize, Waste Water Removal, and Freight Brokering.",
     },
-    { property: 'og:type', content: 'website' }
+    { property: "og:type", content: "website" },
   ],
-  link: [
-    { rel: 'canonical', href: 'https://www.spartatrucking.com/services' }
-  ]
-})
+  link: [{ rel: "canonical", href: "https://www.spartatrucking.com/services" }],
+});
 </script>
 
 <style>
@@ -165,7 +166,7 @@ html {
 
 /* hover underline effect */
 .services-nav a::after {
-  content: '';
+  content: "";
   position: absolute;
   left: 0;
   bottom: -3px;
@@ -177,7 +178,7 @@ html {
 
 .services-nav a:hover,
 .services-nav a:focus-visible {
-  color:  #ff9307;
+  color: #ff9307;
 }
 
 .services-nav a:hover::after,
@@ -228,7 +229,7 @@ html {
 }
 
 .svc-btn:hover {
-  background-color:  #ff9307;
+  background-color: #ff9307;
 }
 
 @media (max-width: 768px) {
